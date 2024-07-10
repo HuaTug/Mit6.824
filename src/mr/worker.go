@@ -103,6 +103,7 @@ func reducing(t *Task, reducef func(string, []string) string) {
 			}
 			val = append(val, kv.Value)
 		}
+		//todo 理解排序的逻辑和过程
 		if len(val) != 0 {
 			rep = append(rep, KeyValue{last.Key, reducef(last.Key, val)})
 		}

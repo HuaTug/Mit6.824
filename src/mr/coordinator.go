@@ -134,6 +134,7 @@ func (c *Coordinator)CompleteTask(args *CompleteTaskArgs,reply *CompleteTaskRepl
 		c.lock.Unlock()//todo
 		return nil
 	}
+	
 	if stage ==Map{
 		c.taskIndex[id].TaskStage=MapComplete
 		for i,v:=range files{
